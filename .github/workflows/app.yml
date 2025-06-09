@@ -132,7 +132,7 @@ jobs:
               backend \"s3\" {
                 bucket   = \"${{ secrets.AWS_ACCOUNT_ID }}-tfstate\"
                 key      = \"app-${{ env.ENVIRONMENT }}.tfstate\"
-                region   = \"${{ vars.AWS_REGION }}\"
+                region   = \"${{ secrets.AWS_REGION }}\"
               }
             }" >> provider.tf
             cat provider.tf
